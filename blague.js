@@ -31,13 +31,13 @@ const loadJoke = async (url) => {
                     <h3 class="joke-type">${data.type}</h3>
                     <h2 class="setup">${data.setup}</h2>
                     <p class="push-line-spoiler">${data.punchline}</p>
-                    <a class="btn" href="index.html">Une autre</a>
+                    <a class="btn" href="index.html">Une nouvelle blague</a>
                 </article>`;
 
     afficher(jokeCard);
   } catch (error) {
-    errorMessage = `<div class="error">
-                    <p>Error: ${error}</p>
+    errorMessage = `<div>
+                    <p class="erreur">${error}</p>
                     <a class="btn" href="index.html">reessayez</a>
                 </div>`;
     afficher(errorMessage);

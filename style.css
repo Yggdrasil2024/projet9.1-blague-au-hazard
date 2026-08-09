@@ -77,12 +77,20 @@ footer {
   align-items: center;
 }
 
+header {
+  position: sticky;
+  top: 1rem;
+}
+
 header p {
   color: var(--color-accent);
 }
 
 main {
-  margin: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .joke {
@@ -148,4 +156,12 @@ main {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.erreur {
+  padding: var(--space-2);
+  margin-bottom: 12px;
+  background-color: #fef2f2;
+  color: #dc2626;
+  border-left: 5px solid #dc2626;
 }
