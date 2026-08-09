@@ -1,0 +1,151 @@
+:root {
+  --color-bg: /*#ffcdb2 #f8fafc*/ #f7f6f9;
+  --color-surface: #ffffff;
+  --color-text-main: /*#2d1e23#0f172a*/ #090809;
+  --color-text-muted: #475569;
+  --color-accent: /*#3b82f6#b5828c*/ #6843be;
+  --color-accent-hover: #2563eb;
+  --color-border: /*rgba(15, 23, 42, 0.06)*/;
+
+  /*====================
+  * les tailes de textes
+  * ==================== */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3rem;
+  /*====================
+  * les rayons
+  * ==================== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+  /*====================
+  * les espacements
+  * ==================== */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+  --space-16: 8rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  background: var(--color-bg);
+  padding: var(--espace);
+}
+
+.carte {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header,
+footer {
+  max-width: 640px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header p {
+  color: var(--color-accent);
+}
+
+main {
+  margin: 12rem;
+}
+
+.joke {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+}
+
+.joke a {
+  align-self: flex-end;
+}
+
+.joke h3 {
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.joke h2 {
+  font-size: var(--text-2xl);
+}
+
+.btn {
+  display: block;
+  padding: var(--space-1);
+  text-decoration: none;
+  color: var(--color-surface);
+  background-color: var(--color-accent);
+  border-radius: var(--radius-md);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+
+.loader {
+  width: var(--space-6);
+  height: var(--space-6);
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  background-color:;
+  border: 6px solid #6843be3d;
+  border-top: 6px solid var(--color-accent);
+  position: relative;
+  border-radius: 50%;
+  animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

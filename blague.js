@@ -7,8 +7,9 @@ function afficher(html) {
 
 const url = "https://official-joke-api.appspot.com/random_joke";
 
-const loadingUI = `<article>
-                    <h2 class="loader">Chargment...</h2>
+const loadingUI = `<article class="loader-container">
+                    <span class="loader"></span>
+                    <h2>Chargment...</h2>
                 </article>`;
 
 const loadJoke = async (url) => {
@@ -26,11 +27,11 @@ const loadJoke = async (url) => {
     if (!data.setup.includes("?")) {
       loadJoke();
     }
-    const jokeCard = `<article>
+    const jokeCard = `<article class="joke">
                     <h3 class="joke-type">${data.type}</h3>
                     <h2 class="setup">${data.setup}</h2>
                     <p class="push-line-spoiler">${data.punchline}</p>
-                    <a href="index.html">Une autre</a>
+                    <a class="btn" href="index.html">Une autre</a>
                 </article>`;
 
     afficher(jokeCard);
